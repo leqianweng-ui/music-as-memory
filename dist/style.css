@@ -81,3 +81,11 @@
 .lyrics-scroll p:last-child{margin-bottom:0}
 .lyrics-scroll.is-dragging{cursor:grabbing;user-select:none}
 @media(prefers-reduced-motion:reduce){.lyrics-scroll p{transform:none!important;opacity:1!important}}
+/* Small editorial credits, tucked below the left navigation. */
+.bgm-credit{position:absolute;left:30px;top:70px;z-index:2;margin:0;color:var(--cream);font-family:'DM Sans',sans-serif;line-height:1.55;text-shadow:0 1px 5px #203323;pointer-events:none}
+.bgm-credit span{display:block}
+.bgm-credit-label{font-size:8px;letter-spacing:.16em;opacity:.8;margin-bottom:3px}
+.bgm-credit-original{font-size:12px;font-weight:500;letter-spacing:.04em}
+.bgm-credit-english{font-size:10px;opacity:.8}
+#market .bgm-credit{left:38px;top:80px}
+@media(max-width:700px){.bgm-credit,#market .bgm-credit{left:20px;top:65px}.bgm-credit-original{font-size:11px}.bgm-credit-english{font-size:9px}#basket .bgm-credit{left:auto;right:20px;top:auto;bottom:24px;text-align:right}}
