@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Music as Memory — A taste of love</title>
+  <meta name="description" content="A little picnic of songs and the memories they carry.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%23b82832'/%3E%3Ctext x='7' y='24' font-family='Georgia' font-size='24' fill='%23fff3d7'%3Em%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <section id="basket" aria-label="The basket">
+    <div class="picnic-scene" id="scene">
+      <svg class="art" viewBox="0 0 1536 1024" aria-hidden="true">
+        <defs>
+          <clipPath id="lemon-outline"><path d="M636 30 C606 24 581 42 570 68 C555 97 575 136 604 150 C628 164 652 162 675 174 C685 180 696 175 697 160 C710 137 718 102 706 75 C692 43 667 30 636 30Z"/></clipPath>
+          <clipPath id="lemon-left"><path d="M636 30 C606 24 581 42 570 68 C555 97 575 136 604 150 C615 157 625 158 637 161 L637 30Z"/></clipPath>
+          <clipPath id="lemon-right"><path d="M637 30 C667 30 692 43 706 75 C718 102 710 137 697 160 C696 175 685 180 675 174 C660 167 649 164 637 161Z"/></clipPath>
+          <!-- Contours follow the isolated strawberry in the supplied 1536 × 1024 painting. -->
+          <clipPath id="berry-outline"><path d="M466 259 C465 247 471 225 478 207 C487 180 505 181 520 187 L532 184 L540 194 L548 192 L548 208 C561 216 565 228 556 244 C548 259 518 270 485 278 C474 280 465 275 466 259Z"/></clipPath>
+          <clipPath id="half-left"><path d="M508 184 C492 181 482 190 478 207 C471 225 465 247 466 259 C465 275 474 280 485 278 L489 276 L500 247 L506 217Z"/></clipPath>
+          <clipPath id="half-right"><path d="M508 184 L520 187 L532 184 L540 194 L548 192 L548 208 C561 216 565 228 556 244 C548 259 518 270 489 276 L500 247 L506 217Z"/></clipPath>
+          <filter id="fruit-shadow" x="-60%" y="-60%" width="220%" height="220%"><feDropShadow dx="2" dy="7" stdDeviation="3" flood-color="#382b1f" flood-opacity=".25"/></filter>
+        </defs>
+        <image href="assets/picnic.png" width="1536" height="1024"/>
+        <!-- Only the original fruit silhouette is covered, with cloth sampled from the same artwork. -->
+        <g class="cloth" clip-path="url(#berry-outline)"><image href="assets/picnic.png" x="-230" y="0" width="1536" height="1024"/></g>
+        <g class="berry-half left" filter="url(#fruit-shadow)">
+          <g clip-path="url(#half-left)"><image href="assets/strawberry.png" x="456" y="180" width="112" height="106" preserveAspectRatio="xMidYMid slice"/><image class="skin" href="assets/picnic.png" width="1536" height="1024"/></g>
+          <path class="cut-edge" d="M508 187 L506 217 L500 247 L489 274"/>
+        </g>
+        <g class="berry-half right" filter="url(#fruit-shadow)">
+          <g clip-path="url(#half-right)"><image href="assets/strawberry.png" x="456" y="180" width="112" height="106" preserveAspectRatio="xMidYMid slice"/><image class="skin" href="assets/picnic.png" width="1536" height="1024"/></g>
+          <path class="cut-edge" d="M508 187 L506 217 L500 247 L489 274"/>
+        </g>
+        <path class="cut-glint" d="M514 172 L482 291"/>
+        <g class="lemon-cloth" clip-path="url(#lemon-outline)"><image href="assets/picnic.png" x="-120" y="-20" width="1536" height="1024"/></g>
+        <g class="lemon-half lemon-left"><g clip-path="url(#lemon-left)"><image href="assets/lemon.png" x="559" y="25" width="163" height="156" preserveAspectRatio="xMidYMid slice"/><image class="lemon-skin" href="assets/picnic.png" width="1536" height="1024"/></g><path class="lemon-edge" d="M637 31 L637 161"/></g>
+        <g class="lemon-half lemon-right"><g clip-path="url(#lemon-right)"><image href="assets/lemon.png" x="559" y="25" width="163" height="156" preserveAspectRatio="xMidYMid slice"/><image class="lemon-skin" href="assets/picnic.png" width="1536" height="1024"/></g><path class="lemon-edge" d="M637 31 L637 161"/></g>
+      </svg>
+      <div class="watermelon-title"><p class="eyebrow">A LITTLE PICNIC OF FEELINGS</p><h1>Music &amp;<br><em>Life</em></h1><p class="subtitle">Some songs take you somewhere.<br>Some take you back.</p></div>
+      <button id="strawberry" aria-label="Cut open the strawberry and discover Love" aria-expanded="false"><span class="love">LOVE</span><span class="berry-hint fruit-engraving">LOVE</span></button>
+      <button id="lemon" aria-label="Cut open the lemon and discover 路过人间" aria-expanded="false"><span class="fruit-ribbon">LEMON</span><span class="lemon-hint fruit-engraving">LEMON</span></button>
+    </div>
+    <a class="corner-mark" href="#market">MORE</a><p class="basket-note">Every fruit holds a feeling.<br>Begin with the fruit you like.</p><span class="edition">THE BASKET &nbsp; / &nbsp; 01</span>
+  </section>
+  <section id="song" aria-labelledby="song-title" hidden>
+    <nav><a href="#basket" id="back">← &nbsp; BASKET</a><span>MUSIC &amp; LIFE</span><a id="more" href="#market">MORE &nbsp; ↗</a></nav>
+    <div class="song-heading"><p class="eyebrow">01 / STRAWBERRY / LOVE</p><h2 id="song-title">How long will<br><em>I love you</em></h2><p class="song-translation"></p><p class="artist">JON BODEN, SAM SWEENEY &amp; BEN COLEMAN</p></div>
+    <div class="song-content">
+      <div class="record-area">
+        <div class="record" id="record"><div class="vinyl-ring" aria-hidden="true"></div><video id="music-video" preload="metadata" loop playsinline src="assets/how-long.mp4" aria-label="How Long Will I Love You music video"></video><button id="expand-video" aria-label="Enlarge music video">⤢<span>WATCH FULL SCREEN</span></button></div>
+        <div class="record-controls"><span id="video-time">0:00</span><button id="mute-video" aria-label="Mute video" aria-pressed="false">SOUND ON</button></div>
+        <div class="transport"><button id="play-video" aria-label="Play video" title="Play video">▶</button><input id="video-seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Seek video"></div>
+        <p id="video-status" role="status"></p>
+      </div>
+      <div class="lyrics-area"><p class="eyebrow">WORDS TO KEEP</p><div class="lyrics-scroll" tabindex="0" role="region" aria-label="Lyrics, scroll to read"><p>How long will I love you?<br>As long as stars are above you<br>And longer if I can</p><p>How long will I need you?<br>As long as the seasons need to<br>Follow their plan</p><p>How long will I be with you?<br>As long as the sea is bound to<br>Wash upon the sand</p><p>How long will I want you?<br>As long as you want me to<br>And longer by far</p><p>How long will I hold you?<br>As long as your father told you<br>As long as you are</p><p>How long will I give to you?<br>As long as I live through you<br>However long you say</p><p>How long will I love you?<br>As long as stars are above you<br>And longer if I may</p></div><span class="lyrics-guide">SCROLL TO WANDER THROUGH THE WORDS ↓</span></div>
+    </div>    <footer><span>LOVE, HELD IN A SONG.</span><span>01 / 06</span></footer>
+  </section>
+  <section id="market" aria-label="The fruit market" hidden><nav><a href="#basket">← &nbsp; BASKET</a><span>MUSIC &amp; LIFE</span><a href="#strawberry">LOVE &nbsp; ↗</a></nav><div class="market-playlists" aria-label="Featured playlists">
+  <div class="playlist-pair">
+    <img src="assets/playlist-voces.jpg" alt="Voces playlist by Galaxy, with its QQ Music QR code at the bottom" width="750" height="1624">
+    <img src="assets/playlist-dream-journey.jpg" alt="Dream Journey playlist by Galaxy, with its QQ Music QR code at the bottom" width="750" height="1624">
+  </div>
+  <p class="playlist-note">For more playlists,<br>scan the QR codes below.</p>
+</div><footer><span>TAKE A LITTLE FEELING WITH YOU.</span><span>03</span></footer></section>
+</main>
+<dialog id="video-dialog" aria-label="Expanded music video"><button id="close-video" aria-label="Close expanded video">CLOSE ×</button><div id="expanded-video-slot"></div></dialog>
+<script src="songs.js"></script><script src="chinese-lyrics.js"></script><script src="background-music.js"></script><script src="fruits.js"></script><script src="lyric-roller.js"></script><script src="lyric-sync.js"></script><script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+# Local dependencies, caches, credentials and editor files
+node_modules/
+.cache/
+.playwright/
+playwright-report/
+test-results/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+# Local screenshots, source notes and test helpers are not website content
+/*.png
+/*.jpg
+/*.json
+/check-*.cjs
+/work/
+/tmp/
